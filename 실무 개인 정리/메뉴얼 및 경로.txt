@@ -1,0 +1,22 @@
+﻿nginx 설정 관련 메뉴얼
+
+	https://swiftcoding.org/nginx-routing#knowledge
+
+ubuntu composer 설치
+
+	https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-16-04
+
+php Extensions
+
+	OpenSSL
+	PDO
+	Mbstring
+	Tokenizer
+
+Samba 설치 및 설정
+
+	http://webnautes.tistory.com/490
+
+share
+
+	\\192.168.0.220\share
