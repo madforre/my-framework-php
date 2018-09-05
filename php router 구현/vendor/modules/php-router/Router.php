@@ -10,8 +10,7 @@ class Router
         "POST"
     );
 
-
-    // 의존성에 대한 참조 유지
+    // request 객체 매개변수를 프로퍼티에 저장하며 의존성에 대한 참조도 유지헌더,
     function __construct(IRequest $request)
     {
         $this->request = $request;
@@ -52,11 +51,14 @@ class Router
         header("{$this->request->serverProcotol} 405 Method Not Allowed");
     }
 
-    private function defaultRequestHandler()
+    private function defaultRequestHandler($method)
     {
         header("{$this->request->serverProtocol} 404 Not Found");
+        header("Location: ".$method);
+        // header("Location: /../resources/errors/404.php");
     }
 
+    // 확인해야 할 것
     // 라우터 해결
     function resolve()
     {
@@ -69,16 +71,15 @@ class Router
 
         if(is_null($method))
         {
-            $this->defaultRequestHandler();
+            $this->defaultRequestHandler($method);
             return;
         }
 
-        // 라우터 get(),post() 메소드 인자인 콜백함수 실행 (함수의 인수가 불확실한 길이의 배열일 때의 함수 호출)
-        // 콜백함수는 두번째 인자인 익명함수를 의미.
+        // 익명함수 호출, 인자 전달
         echo call_user_func_array($method, array($this->request));
     }
 
-    // 스크립트의 끝에서 함수들이 전부 호출된다. ? 소멸자 쓰임새 다시 볼 것
+    // 스크립트의 끝에서 해결 함수가 호출된다.
     function __destruct()
     {
         $this->resolve();

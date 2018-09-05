@@ -1,4 +1,5 @@
 <?php
+
 function foobar($arg, $arg2) {
     echo __FUNCTION__, " got $arg and $arg2\n";
 }
@@ -11,6 +12,8 @@ class foo {
         echo 'destruct';
     }
 }
+
+
 
 // 함수 호출하고 인수에 배열 전달
 

@@ -97,3 +97,7 @@ rtrim()
 		call_user_func_array(array($foo, "bar"), array("three", "four"));
 
 
+	* 클로저가 return 이면 출력시 echo 사용하고
+	* 클로저가 echo면 call_user_func_array 만 사용
+
+

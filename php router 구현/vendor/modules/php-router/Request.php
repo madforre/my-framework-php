@@ -1,6 +1,6 @@
 <?php
 // 추 후 spl_autoload_register로 변경할 것
-include_once 'IRequest.php';
+include_once __DIR__.'/IRequest.php';
 
 // HTTP 요청에 대한 정보가 들어있는 객체를 초기화하기 위한 Request 클래스
 // HTTP 요청에 대한 정보들이 가공된 형태로 들어있음.

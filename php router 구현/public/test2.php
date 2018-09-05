@@ -78,7 +78,7 @@ class Request
     {
         foreach($_SERVER as $key => $value)
         {
-            echo $this->{$this->toCamelCase($key)} .'<br>';
+            echo $key.' '.$this->{$this->toCamelCase($key)} .'<br>';
         }
     }
 
