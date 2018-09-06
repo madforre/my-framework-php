@@ -100,4 +100,6 @@ rtrim()
 	* 클로저가 return 이면 출력시 echo 사용하고
 	* 클로저가 echo면 call_user_func_array 만 사용
 
+* __DIR__ 은 ' 마법 상수 '이며 후행 슬래시가없는 현재 파일의 디렉토리를 반환합니다.
+
 
