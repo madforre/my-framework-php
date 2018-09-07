@@ -1,3 +1,20 @@
 설치된 패키지 검색
 
 	dpkg -l | grep "패키지_이름의_일부"
+
+nginx php error 표시 설정
+
+	php fpm이 설치된 경우일 것이므로
+	/etc/php/7.2/fpm 에서 pool.d 폴더에 개인 설정을 추가한다.
+	 (php-fpm.conf 가 pool.d/*.conf 를 include 한다.)
+	따로 설정하거나 만들어진 pool이 없을경우 php-fpm.conf 로 설정한다
+
+Wjqthr@0428
+
+mysql 외부 접속 허용 설정
+
+	/etc/mysql 에서 설정파일들 찾아서 bind-address 를 주석처리하여 root만 접속가능한 Lock을 풀어준다.
+
+MySQL 원격접속 허용 명령 실행
+
+grant all privileges on *.* to 'root'@'Windows IP Address or %' identified by 'Password';
