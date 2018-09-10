@@ -1,8 +1,8 @@
 <?php
 
-/* 
-* 라우터 사용법 
-*   
+/*
+* 라우터 사용법
+*
 * - 첫번째 파라미터에 /url 입력
 * - 두번째 클로저에 CreateView 메소드 사용하여 뷰 페이지 설정 (인자에 랜더링 할 페이지를 적어주자.)
 *
@@ -22,4 +22,17 @@ Router::get('/about', function(){
 
 Router::get('/contact', function(){
     Contact::CreateView('contact');
+});
+
+Router::get('/news', function(){
+    News::CreateView('news');
+    News::index();
+});
+
+Router::get('/join', function(){
+    Join::CreateView('join');
+});
+
+Router::get('/login', function(){
+    Login::CreateView('login');
 });

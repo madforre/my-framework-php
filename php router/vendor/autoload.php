@@ -15,14 +15,6 @@ class MyClassLoader
         } 
     }
 
-    public static function PdoLoader($class)
-    {
-        if (file_exists(__DIR__."/modules/pdo/".$class.".php")) 
-        {
-            require_once __DIR__."/modules/pdo/".$class.".php";
-        } 
-    }
-
     /* 모델, 컨트롤러 로더 */
 
     public static function ControllerLoader($class)
@@ -45,7 +37,6 @@ class MyClassLoader
 /* 오토로더 클래스 등록 */
 
 spl_autoload_register('MyClassLoader::RouterLoader');
-spl_autoload_register('MyClassLoader::PdoLoader');
 spl_autoload_register('MyClassLoader::ControllerLoader');
 spl_autoload_register('MyClassLoader::ModelLoader');
 

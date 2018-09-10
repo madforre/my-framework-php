@@ -26,7 +26,7 @@ require_once __DIR__."/../routes/web.php";
 
 new NotFound();
 
-DB::connect();
-
 /* -------------------------------------------- */
 
+
+// $router = new Router(new Request);

@@ -13,7 +13,7 @@ class Router
         if ($_SERVER['REQUEST_URI'] == $route && $_SERVER['REQUEST_METHOD'] == "GET")
         {
             // 클로져 호출
-            $function->__invoke();
+            call_user_func($function);
         }
 
     }
