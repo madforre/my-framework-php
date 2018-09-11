@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+#wrap {
+  width : 100%;
+  height : 90%;
+  padding : 14rem;
+  box-sizing: border-box;
+}
+
+/* 로그인 박스 */
+
+#wrap .box {
+  width : 350px;
+  height : auto;
+  margin : 0 auto;
+  border : 1px solid limegreen;
+  background: #fff;
+  padding : 30px;
+}
+
+#wrap .box .top {
+  border : 1px dotted green;
+  text-align: center;
+  padding : 40px;
+}
+
+#wrap .box .top h1>a {
+  color : #8fde27;
+}
+
+/* 로그인 박스 가운데 */
+
+#wrap .box .mid {
+  padding : 5 0px;
+  border : 1px solid limegreen;
+  overflow: hidden;
+  box-sizing: border-box;
+  
+}
+
+
+#wrap .box .mid .left_mid input {
+  text-indent: 12px;
+  width : 100%;
+  height : 50px;
+  border : 1px dotted green;
+  box-sizing: border-box;
+}
+
+#wrap .box .mid .left_mid input:nth-child(1) {
+  margin-top : 8px;
+  margin-bottom : 8px;
+}
+
+
+#wrap .box .mid .left_mid {
+  width : 50%;
+  float : left;
+}
+
+#wrap .box .mid .left_mid input {
+  display : block;
+}
+
+#wrap .box .mid .right_mid {
+  width : 50%;
+  float : left;
+}
+
+#wrap .box .mid .right_mid button {
+  margin-left : 8px;
+  margin-top : 8px;
+  width : 158px;
+  height : 135px;
+  display : block;
+  cursor: pointer;
+  background: rgb(243, 255, 244);
+  outline : 0;
+  border : 1px solid green;
+}
+
+#wrap .box .mid .right_mid button:hover {
+  background: rgb(232, 251, 232);
+  color : green;
+}
+
+/* 로그인 박스 아래 */
+
+#wrap .box .bottom {
+  margin-top : 12px;
+  padding : 8px;
+  border : 1px solid green;
+  box-sizing: border-box;  
+}
+
+#wrap .box .bottom a {
+  margin-left : 8px;
+  text-align: center;
+  width : 170px;
+  cursor: pointer;
+  color : limegreen;
+  background: rgb(243, 255, 244);
+  box-sizing: border-box;
+  border : 1px solid green;
+  padding : 3px;
+}
+
+#wrap .box .bottom a:hover {
+  background: rgb(232, 251, 232);
+}

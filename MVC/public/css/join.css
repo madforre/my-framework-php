@@ -1,0 +1,79 @@
+@charset "utf-8";
+
+#wrap {
+    width : 100%;
+    height : 90%;
+    box-sizing: border-box;
+  }
+  
+  /* 회원가입 박스 */
+  
+  #wrap .box {
+    width : 350px;
+    height : auto;
+    margin : 0 auto;
+    border : 1px solid limegreen;
+    background: #fff;
+    padding : 30px;
+  }
+  
+  #wrap .box .top {
+    border : 1px dotted green;
+    text-align: center;
+    padding : 10px;
+  }
+  
+  #wrap .box .top h1>a {
+    color : #8fde27;
+  }
+  
+  /* 회원가입 박스 가운데 */
+  
+  #wrap .box .mid {
+    padding : 8px;
+    border : 1px solid limegreen;
+    box-sizing: border-box;
+    
+  }
+  
+  
+  #wrap .box .mid input {
+    text-indent: 12px;
+    width : 100%;
+    height : 50px;
+    border : 1px dotted green;
+    box-sizing: border-box;
+  }
+
+  #wrap .box .mid input:nth-child(2) {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  
+  
+  /* 회원가입 박스 아래 */
+
+  #wrap .box .bottom {
+    margin-top : 12px;
+    padding : 8px;
+    border : 1px solid green;
+    box-sizing: border-box;  
+  }
+  
+  #wrap .box .bottom input {
+    margin-left : 8px;
+    text-align: center;
+    width : 120px;
+    cursor: pointer;
+    color : limegreen;
+    background: rgb(243, 255, 244);
+    box-sizing: border-box;
+    padding : 3px;
+  }
+  
+  #wrap .box .bottom a:hover {
+    background: rgb(232, 251, 232);
+  }
+  
+  
