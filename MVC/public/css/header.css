@@ -7,7 +7,7 @@
     width : 100%;
     min-width : 900px;
     height : 100px;
-    background: rgb(161, 195, 175);
+    background: rgb(212, 248, 215);
 }
 
 .nav .gnb {
@@ -16,7 +16,7 @@
     height : 100px;
     background: #fff;
     border : 3px solid limegreen;
-    padding : 20px;
+    padding : 1rem;
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -26,6 +26,6 @@
     width : 10%;
 }
 
-/* .nav .gnb h1 a {
-
-} */
+.nav .gnb h1 a {
+    font-size : 1.2rem;
+}

@@ -12,7 +12,7 @@ class DB
     {
         /* 
         * Prepared Statements를 이용할 수 있도록
-        * 에뮬레이터 기능을 FALSE로 하였다. (DB Injection 공격 방어에 유용)
+        * 에뮬레이터 기능을 FALSE로 하였다. (Place Holder - DB Injection 공격 방어에 유용)
         * 또한 오류 모드를 설정하였다.        
         */
 
@@ -45,20 +45,25 @@ class DB
 
         $toDo = explode(' ', $query)[0];
 
-        // 입력한 쿼리문 마다 리턴값을 다르게 생성 (용도 - 쿼리별 반환 값 확인)
+        // 입력한 쿼리문 마다 리턴값을 다르게 생성 (용도 - 디버그 용)
         switch ($toDo) {
+
         case $toDo == 'SELECT':
-            $data = $stmt->fetchAll();          
+            $data = $stmt;
             break;
+
         case $toDo == 'INSERT':
             $data = "글 생성";
             break;
+
         case $toDo == 'UPDATE':
             $data = "글 수정";
             break;
+
         case $toDo == 'DELETE':
             $data = "글 삭제";
             break;
+
         default:
             $data = "쿼리문이 아닙니다.";
         }
