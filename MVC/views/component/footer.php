@@ -1,6 +1,6 @@
 
 <div class="footer">
-    <p>madforre.seouleager.net</p>
+    <p>madforre@seouleaguer.net</p>
 </div>
 
 </body>

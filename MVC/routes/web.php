@@ -9,33 +9,33 @@
 */
 
 Router::get('/', function(){
-    Controller::CreateView('home');
+    Controller::createView('home');
 });
 
 Router::get('/home', function(){
-    Controller::CreateView('home');
+    Controller::createView('home');
 });
 
 Router::get('/about', function(){
-    About::CreateView('about');
+    About::createView('about');
 });
 
 Router::get('/contact', function(){
-    Contact::CreateView('contact');
+    Contact::createView('contact');
 });
 
 Router::get('/news', function(){
-    News::CreateView('news');
+    News::createView('news');
     News::index(new Request);
     
 });
 
 Router::get('/join', function(){
-    Join::CreateView('join');
+    Join::createView('join');
 });
 
 Router::get('/login', function(){
-    Login::CreateView('login');
+    Login::createView('login');
 });
 
 

@@ -17,7 +17,7 @@
                 </li>
                 <li>
                     <label for="pwCheck"></label>
-                    <input type="text" id="pw" name="pwCheck" placeholder="비밀번호 확인">
+                    <input type="text" id="pwCheck" name="pwCheck" placeholder="비밀번호 확인">
                 </li>
             </ul>
         </div>

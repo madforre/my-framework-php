@@ -24,6 +24,7 @@ else {
   <link rel="stylesheet" href="css/join.css">
   <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="css/footer.css">
+  <script type="text/javascript" src= "js/validation.js"></script>
 </head>
 <body>
   <div class="nav">
@@ -38,14 +39,17 @@ else {
         echo "<li>권한 : " .$_SESSION['auth']. "</li>";
       } else {
         echo "<li>권한 : Guest</li>";
-      }      
+      }
+      ?>
+      <li><a href="/join">회원가입</a></li>
+      <?php
       if (isset($_SESSION['id'])) {
-        echo "<li><a href='/logout'>로그아웃</a></li>";        
+        echo "<li><a href='/logout'>로그아웃</a></li>";
       } else {
         echo "<li><a href='/login'>로그인</a></li>";
       }
       ?>
-      <li><a href="/join">회원가입</a></li>
+      
       <li><?=$show?></li>
     </ul>
     </div>

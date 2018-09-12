@@ -2,7 +2,7 @@
   <div class="box">
     <form action="/joinOk" method="post">
       <div class="top">
-        <h1><a href="/">회원가입</a></h1>
+        <h1>회원가입</h1>
       </div>
       <div class="mid">
         <ul>
@@ -16,11 +16,11 @@
           </li>
           <li>
             <label for="pw"></label>
-            <input type="text" id="pw" name="pw" placeholder="비밀번호">
+            <input type="password" id="pw" name="pw" placeholder="비밀번호">
           </li>
           <li>
             <label for="pwCheck"></label>
-            <input type="text" id="pw" name="pwCheck" placeholder="비밀번호 확인">
+            <input type="password" id="pwCheck" name="pwCheck" placeholder="비밀번호 확인">
           </li>
         </ul>
       </div>

@@ -4,6 +4,7 @@
     width : 100%;
     height : 10%;
     background: rgb(212, 248, 215);
+    min-width : 900px;
 }
 
 .footer p {

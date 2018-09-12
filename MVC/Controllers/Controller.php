@@ -8,7 +8,7 @@ class Controller extends DB
     public static $dbName = DB_NAME;
     public static $password = DB_PASS;
 
-    public static function CreateView($viewName) 
+    public static function createView($viewName) 
     {
 
         if (file_exists(__DIR__."/../views/".$viewName.".php")) {

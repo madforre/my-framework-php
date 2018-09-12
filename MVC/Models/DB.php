@@ -31,7 +31,7 @@ class DB
         {
             die('DB 접속 오류:'.$Exception->getMessage( ));
         }
-    
+        
         // PDO 객체 반환
         return $pdo;
     }
@@ -46,27 +46,27 @@ class DB
         $toDo = explode(' ', $query)[0];
 
         // 입력한 쿼리문 마다 리턴값을 다르게 생성 (용도 - 디버그 용)
-        switch ($toDo) {
+        // switch ($toDo) {
 
-        case $toDo == 'SELECT':
-            $data = $stmt;
-            break;
+        // case $toDo == 'SELECT':
+        $data = $stmt;
+        //     break;
 
-        case $toDo == 'INSERT':
-            $data = "글 생성";
-            break;
+        // case $toDo == 'INSERT':
+        //     $data = "글 생성";
+        //     break;
 
-        case $toDo == 'UPDATE':
-            $data = "글 수정";
-            break;
+        // case $toDo == 'UPDATE':
+        //     $data = "글 수정";
+        //     break;
 
-        case $toDo == 'DELETE':
-            $data = "글 삭제";
-            break;
+        // case $toDo == 'DELETE':
+        //     $data = "글 삭제";
+        //     break;
 
-        default:
-            $data = "쿼리문이 아닙니다.";
-        }
+        // default:
+        //     $data = "쿼리문이 아닙니다.";
+        // }
 
         return $data;
         
