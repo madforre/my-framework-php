@@ -3,7 +3,7 @@
 #wrap {
   width : 100%;
   height : 90%;
-  padding : 14rem;
+  padding : 12rem;
   box-sizing: border-box;
 }
 
@@ -15,7 +15,7 @@
   margin : 0 auto;
   border : 1px solid limegreen;
   background: #fff;
-  padding : 30px;
+  padding : 60px;
 }
 
 #wrap .box .top {
@@ -35,7 +35,6 @@
   border : 1px solid limegreen;
   overflow: hidden;
   box-sizing: border-box;
-  
 }
 
 
@@ -47,11 +46,12 @@
   box-sizing: border-box;
 }
 
-#wrap .box .mid .left_mid input:nth-child(1) {
-  margin-top : 8px;
-  margin-bottom : 8px;
+#wrap .box .mid span {
+  display : none;
+  line-height : 5px;
+  font-size : 2px;
+  color : rgb(255, 105, 105);
 }
-
 
 #wrap .box .mid .left_mid {
   width : 50%;
@@ -71,7 +71,7 @@
   margin-left : 8px;
   margin-top : 8px;
   width : 158px;
-  height : 135px;
+  height : 115px;
   display : block;
   cursor: pointer;
   background: rgb(243, 255, 244);
@@ -82,6 +82,11 @@
 #wrap .box .mid .right_mid button:hover {
   background: rgb(232, 251, 232);
   color : green;
+}
+
+#wrap .box .mid .right_mid span {
+  margin-top: 15px;
+  font-size : 1px;
 }
 
 /* 로그인 박스 아래 */

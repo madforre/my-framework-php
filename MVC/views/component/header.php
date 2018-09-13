@@ -24,7 +24,6 @@ else {
   <link rel="stylesheet" href="css/join.css">
   <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="css/footer.css">
-  <script type="text/javascript" src= "js/validation.js"></script>
 </head>
 <body>
   <div class="nav">
@@ -49,7 +48,6 @@ else {
         echo "<li><a href='/login'>로그인</a></li>";
       }
       ?>
-      
       <li><?=$show?></li>
     </ul>
     </div>

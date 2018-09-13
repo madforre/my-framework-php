@@ -8,10 +8,6 @@ class Login extends Controller
 
         Check::formValidation('/login');
 
-        // 비밀번호, 비밀번호 확인 비교 //
-
-        Check::passwordConfirm('/login');
-
         // 조회시 PDO - 플레이스 홀더 사용하여 SQL Injection 방어
 
         $user_id = $_POST['id'];

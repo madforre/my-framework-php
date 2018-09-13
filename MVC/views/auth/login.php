@@ -10,19 +10,18 @@
                 <li>
                     <label for="id"></label>
                     <input type="text" id="id" name="id" placeholder="아이디">
+                    <span class="alert"></span>
                 </li>
                 <li>
                     <label for="pw"></label>
-                    <input type="text" id="pw" name="pw" placeholder="비밀번호">
-                </li>
-                <li>
-                    <label for="pwCheck"></label>
-                    <input type="text" id="pwCheck" name="pwCheck" placeholder="비밀번호 확인">
+                    <input type="password" id="pw" name="pw" placeholder="비밀번호">
+                    <span class="alert"></span>
                 </li>
             </ul>
         </div>
         <div class="right_mid">
-          <button type="submit">로그인</button>
+          <button class="login" type="button">로그인</button>
+          <span class="alert"></span>
         </div>
       </div>
       <div class="bottom">
@@ -31,3 +30,4 @@
     </form>
   </div>
 </div>
+<script type="text/javascript" src= "js/login.js"></script>
