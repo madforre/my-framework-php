@@ -1,0 +1,15 @@
+﻿* flex: auto; 는 flex : 1 1 auto; 와 같다.
+
+	flex-grow : 1;
+	flex-shrink : 1;
+	flex-basis : auto;
+
+
+justify-content
+
+	Container안에 있는 Item들을 수평방향으로 정렬하는 방법을 지정합니다.
+
+align-items
+
+	Container 안에 있는 item들을 수직방향을 정렬하는 방법을 지정합니다.
+

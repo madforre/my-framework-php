@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+
+#wrap {
+    /* display : flex;
+    flex-direction: column; */
+}
+
+#wrap .nav .gnb {
+    width : 81%;
+    margin : 0 auto;
+    display : flex;
+    height : 60px;
+    box-sizing : border-box;
+    /* default */
+    /* flex-direction : row; */
+    flex-wrap: nowrap;
+    align-items : center;
+
+    /* 축약형 */
+    /* flex-flow: row nowrap; */
+}
+
+
+#wrap .section {
+    display : flex;
+    flex-direction : column;
+    width : 100%;
+    height : 500px;
+    border : 3px solid rgb(44, 62, 221);
+    box-sizing : border-box;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#wrap .footer {
+    margin-top : auto;
+    width : 100%;
+    height : 70px;
+    background: rgb(233, 233, 233);
+    box-sizing : border-box;
+}
+
+
+/* header */
+
+#wrap .nav {
+    width : 100%;
+    background: #000;
+    height : auto;
+    color : #fff;
+}
+
+#wrap .nav a {
+    color : #fff;
+}
+
+#wrap .nav .gnb li {
+    border : 1px solid #fff;
+    line-height : 40px;
+    text-align: center;
+    /* flex-basis : auto; */
+    flex : auto;
+}
+
+#wrap .nav .gnb li:nth-child(1) {
+    /* margin-left : auto; */
+}
+
+#wrap .nav .gnb li:nth-child(7) {
+    flex-grow: 1;
+}
+
+#wrap .nav .gnb li input {
+    /* background: #777; */
+}
+
+#wrap .nav .gnb li input[type="placeholder"] {
+    font-size : 5rem;
+    color : #fff;
+}
+
+
+
+/* section */
+
+#wrap .section.one {
+    display : flex;
+    flex-direction: row;
+    background: url(/images/simple-codelines.svg), #2b3137;
+    height : 550px;
+}
+
+#wrap .section.one>.left {
+    text-align : left;
+    margin-left : auto;
+    color : #fff;
+    width : 40%;
+    height : 70%;
+}
+
+#wrap .section.one>.left h1 {
+    font-size : 3rem;
+}
+
+#wrap .section.one>.left p {
+    width : 80%;
+    color : #ccc;
+}
+
+#wrap .section.one>.right {
+    margin-right : auto;
+    width : 30%;
+    height : 78%;
+    background: #fff;
+}
+
+#wrap .section.two {
+    padding : 0;
+    display : flex;
+    align-self: flex-start;
+    justify-content: center;
+}
+
+#wrap .section h1 {
+    font-size: 2.5rem;
+}
+
+#wrap .section p {
+    margin: 2rem 0;
+    width : 60%;
+}
+
+#wrap .section button.blue {
+    display :block;
+    background: rgb(50, 129, 255);
+    height : 3rem;
+    color : #fff;
+    padding : 1rem;
+    box-sizing : border-box;
+}
+
+#wrap .section button.white {
+    display : block;
+    background : #fff;
+    color: rgb(50, 129, 255);
+    border : 1px solid rgb(50, 129, 255);
+    height : 3rem;
+    padding : 1rem;
+    box-sizing : border-box;
+}
