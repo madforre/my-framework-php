@@ -2,13 +2,28 @@
 
 throttle
 
+	- 이벤트를 일정한 주기마다 발생하도록 하는 기술
 	- 밀리세컨드마다 실행의 흐름을 일정하게 유지한다.
 
 debounce
 
 	- 과다한 이벤트 로직 실행 방지
+	- 이벤트를 그룹화하여 특정시간이 지난 후 하나의 이벤트만 발생하도록 하는 기술
 
 	주로 검색에 사용 - 타이핑 마쳤다고 예상되는 지점에서 요청을 보냄
 
 
+호이스팅 - Hoisting 이란?
 
+	* 정의된 변수의 선언문과 함수 선언식을 유효 범위의 최상단으로 끌어올리는 행위를 말한다.
+
+
+*함수 표현식은 함수를 반환한다.
+
+ (function(){ console.log('test') }) -> 함수가 반환됨
+ (function(){ console.log('test') })() -> 반환된 함수가 실행됨
+
+
+이벤트 리스너 두번째 파라미터 관련 글
+
+// https://stackoverflow.com/questions/15255801/javascript-addeventlistener-function
