@@ -1,0 +1,2 @@
+﻿mvc.news 테이블 - 컬럼 : id topic content
+mvc.users 테이블 - 컬럼 : id name email password
