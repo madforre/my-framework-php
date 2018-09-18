@@ -58,4 +58,23 @@
 		공통적으로 적용되는 규칙이다.
 
 
+--------------------------------------
 
+DB 백업
+
+	mysqldump -u [user_id] -p[user_password] [DB_name] > [backup_file_name].sql
+
+DB 복원 
+
+	mysql -u [user_id] -p[user_password] [DB_name] < [backup_file_name].sql
+
+참조 : https://cjh5414.github.io/mysql-backup-automatically/
+
+* /etc/mysql/mysql.conf.d/ 
+
+	bind-address 주석처리를 해야 외부에서 접근가능
+
+* 특정 IP 대역 접근 허용 설정
+
+	mysql> grant all privileges on *.* to ‘root’@‘192.168.%’ \
+		identified by‘root의 패스워드’;

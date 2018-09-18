@@ -1,0 +1,8 @@
+﻿1. 나만의 docker image 파일 만들기
+2. 사이트에 HTTPS 적용
+3. SSL / TLS
+4. DB 쿼리 (MySQL 클라이언트 - HeidiSQL 사용)
+5. AWS S3, Memcached, Redis 외부 스토리지로 하여 Docker와 연동
+6. AWS Elastic Load Balncing
+7. 웹 소켓 이용한 채팅앱 간단 구현
+8. BeautifulSOAP4, celenium 이용한 웹 스크래핑

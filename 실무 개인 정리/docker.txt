@@ -155,3 +155,18 @@ docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
 	  --name mysql \
 	  -v /my/own/datadir:/var/lib/mysql \ # 볼륨 마운트하는 부분
 	 mysql:5.7
+
+
+컨테이너는 삭제 후 새로 만들면 모든 데이터가 초기화됨
+업로드 파일을 외부 스토리지와 링크하여 사용하거나 S3같은 별도의 저장소가 필요
+세션이나 캐시를 파일로 사용하고 있다면 memcached나 redis와 같은 외부로 분리
+
+----------------------------------------------------
+
+Docker-Compose yml
+
+build : 빌드시 적용되는 구성 옵션
+
+
+
+
