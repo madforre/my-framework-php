@@ -6,3 +6,8 @@
 6. AWS Elastic Load Balncing
 7. 웹 소켓 이용한 채팅앱 간단 구현
 8. BeautifulSOAP4, celenium 이용한 웹 스크래핑
+
+
+nginx
+
+php

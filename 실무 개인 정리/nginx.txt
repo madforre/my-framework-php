@@ -1,0 +1,4 @@
+checking of a file existence with the -f and !-f operators;
+checking of a directory existence with the -d and !-d operators;
+checking of a file, directory, or symbolic link existence with the -e and !-e operators;
+checking for an executable file with the -x and !-x operators.
