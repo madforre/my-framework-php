@@ -255,4 +255,3 @@ docker cp mycontainer:/path/foo.txt /path/foo.txt
 ------------------
 
 EXPOSE는 호스트와 연결만 할 뿐 외부에 노출은 되지 않습니다.
-
