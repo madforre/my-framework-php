@@ -1,13 +1,13 @@
-checking of a file existence with the -f and !-f operators;
+﻿checking of a file existence with the -f and !-f operators;
 checking of a directory existence with the -d and !-d operators;
 checking of a file, directory, or symbolic link existence with the -e and !-e operators;
 checking for an executable file with the -x and !-x operators.
 
 
-TCP ���� �غ���
-    mysql �̹��� ����� ����������.
+TCP 먼저 해보고
+    mysql 이미지 만들고 랜더링까지.
 
-    �� �� �������ε� �غ���
+    추 후 소켓으로도 해보기
 
 
 -----------------------------------------
@@ -16,29 +16,51 @@ fastcgi_pass
 
 - socket
 
-	fastcgi_pass�� php-fpm�� NGINX�� �����ϱ� ���� �������̽��� �����ϴ� ���̴�. 
-	�� ���� php-fpm�� listen �������� ��ġ�ؾ� �Ѵ�. 
-	������ php-fpm ���������� �� �������� /etc/php5/fpm/pool.d/www.conf���� ã�� �� �־���. 
-	������ unix:/var/run/php5-fpm.sock�� ���н� �������� NGINX�� PHP-FPM�� ���� (��ǻ�͸� �ǹ��ϴ�) ȣ��Ʈ�� ��ġ�� ��� ����Ѵ�.
+	fastcgi_pass는 php-fpm과 NGINX를 연결하기 위한 인터페이스를 지정하는 것이다. 
+	이 값은 php-fpm의 listen 설정값과 일치해야 한다. 
+	필자의 php-fpm 버전에서는 이 설정값을 /etc/php5/fpm/pool.d/www.conf에서 찾을 수 있었다. 
+	지정된 unix:/var/run/php5-fpm.sock는 유닉스 소켓으로 NGINX와 PHP-FPM이 같은 (컴퓨터를 의미하는) 호스트에 설치된 경우 사용한다.
  
 - TCP Connection
 
-	���� NGINX�� PHP-FPM�� ���� �ٸ� �ӽſ� ��ġ�Ǿ��ٸ� TCP Connection�� ���� �����ؾ� �Ѵ�. 
-	���� PHP-FPM�� 192.168.125.142�� ��ġ�Ǿ� �ִٸ�  NGINX ���� ������ �Ʒ��� ���ƾ� �Ѵ�.
+	만약 NGINX와 PHP-FPM이 서로 다른 머신에 설치되었다면 TCP Connection의 값을 지정해야 한다. 
+	만약 PHP-FPM이 192.168.125.142에 설치되어 있다면  NGINX 측의 설정은 아래와 같아야 한다.
 
 	fastcgi_pass   192.168.125.142:9000;
 
-	�̿� �����ؼ� PHP-FPM ���� listen ���� �Ʒ��� ���ƾ� �Ѵ�.
+	이에 대응해서 PHP-FPM 측의 listen 값은 아래와 같아야 한다.
 
 	listen = 192.168.125.142:9000
 
 - Upstream
 
-	Upstream ������ �ٸ� ���� Origin ��������� �Ѵ�. �� �������� ��ǻ�Ͱ� ���������� � ���� ó�� �� �� � ���񽺸� �޴� ������ �ǹ��Ѵ�. 
-	����Ʈ�� ������ PHP-FPM�� ��ġ�� �����̰�, �� �ƶ����� NGINX�� Downstream ������� �� �� �ִ�.
+	Upstream 서버는 다른 말로 Origin 서버라고도 한다. 즉 여러대의 컴퓨터가 순차적으로 어떤 일을 처리 할 때 어떤 서비스를 받는 서버를 의미한다. 
+	업스트림 서버는 PHP-FPM이 설치된 서버이고, 이 맥락에서 NGINX는 Downstream 서버라고 할 수 있다.
 
 - Upstream Module
 
-	����Ʈ�� ����� NGINX�� ����� ���� ���������� ���Ϻл�, �ӵ� ������ ���� ������ �� �� �ְ� �Ѵ�. 
-	���������� ����Ʈ�� ����� �̿��ؼ� �Ѵ��� �������� �������� ���ø����̼� ������ ���̴� ����� �ִ�.
+	업스트림 모듈은 NGINX에 내장된 모듈로 엔진엑스로 부하분산, 속도 개선과 같은 역할을 할 수 있게 한다. 
+	엔진엑스의 업스트림 모듈을 이용해서 한대의 웹서버에 여러대의 에플리케이션 서버를 붙이는 방법이 있다.
 
+-------------------------------------------------------------------------------
+
+임베디드 변수
+
+	ngx_http_fastcgi_module모듈은 fastcgi_param 지시문을 사용하여 매개 변수를 설정하는 데 
+	사용할 수있는 내장 변수를 지원합니다 .
+
+	$fastcgi_script_name
+
+		요청 URI 또는 ​​URI가 슬래시로 끝나면 fastcgi_index 지시어로 구성된 색인 파일 이름이 URI에 요청 됩니다. 
+		이 변수는 설정하는 데 사용할 수 있습니다 SCRIPT_FILENAME및 PATH_TRANSLATED PHP의 스크립트 이름을 결정하는 매개 변수를. 
+		예를 들어, /info/다음 지시어가있는 요청
+
+		fastcgi_index index.php;
+		fastcgi_param SCRIPT_FILENAME / home / www / scripts / php $ fastcgi_script_name;
+		SCRIPT_FILENAME파라미터 "는 동일 할 것이다 /home/www/scripts/php/info/index.php."
+	
+		fastcgi_split_path_info 지시문을 사용할 때 $fastcgi_script_name변수는 지시문에 의해 설정된 첫 번째 캡처의 값과 같습니다.
+
+	$fastcgi_path_info
+
+		fastcgi_split_path_info 지시문에 의해 설정된 두 번째 캡처 값 . 이 변수를 사용하여 PATH_INFO매개 변수 를 설정할 수 있습니다 .
